@@ -13,14 +13,14 @@ The judge will test your solution with the following code:
 int[] nums = [...]; // Input array
 int val = ...; // Value to remove
 int[] expectedNums = [...]; // The expected answer with correct length.
-                            // It is sorted with no values equaling val.
+							// It is sorted with no values equaling val.
 
 int k = removeElement(nums, val); // Calls your implementation
 
 assert k == expectedNums.length;
 sort(nums, 0, k); // Sort the first k elements of nums
 for (int i = 0; i < actualLength; i++) {
-    assert nums[i] == expectedNums[i];
+	assert nums[i] == expectedNums[i];
 }
 If all assertions pass, then your solution will be accepted.
 
@@ -49,15 +49,15 @@ Constraints:
 **/
 
 function removeElement(nums: number[], val: number): number {
-    let i = 0;
-    nums.forEach(element => {
-      if (element !== val) {
-        nums[i] = element;
-        i++;
-      }
-    });
-    return i;
-  };
+	let i = 0;
+	nums.forEach(element => {
+		if (element !== val) {
+			nums[i] = element;
+			i++;
+		}
+	});
+	return i;
+};
 
-// Time-Complexity: O(N) 
+// Time-Complexity: O(N)
 // Space-Complexity: O(1)
