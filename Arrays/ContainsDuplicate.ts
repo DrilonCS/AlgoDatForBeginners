@@ -18,16 +18,16 @@ Output: false
 Recommended Time & Space Complexity
 You should aim for a solution with O(n) time and O(n) space, where n is the size of the input array.
 */
-class Solution {
-    hasDuplicate(nums: number[]): boolean {
-        let list: number[] = [];
-        for (let i = 0; i < nums.length; i++) {
-            if (!list.includes(nums[i])) {
-                list.push(nums[i]);
-            } else {
-                return true;
-            }
-        }
-        return false;
+
+function hasDuplicate(nums: number[]): boolean {
+    let list: number[] = [];
+
+    for (let i = 0; i < nums.length; i++) {
+        if (!list.includes(nums[i]))
+            list.push(nums[i]);
+        else
+            return true;
     }
+
+    return false;
 }
